@@ -1,0 +1,65 @@
+package com.stack;
+
+public class postfixEvaluation {
+
+	String exp;
+	stack s;
+	char temp;
+	
+	postfixEvaluation(){
+		s=new stack();
+	}
+	
+	void evaluate(){
+		for(int i=0;i<exp.length();i++){
+			temp=exp.charAt(i);
+		if(Character.isDigit(temp)){
+			s.push(temp);
+		}
+		else{
+			s.push((char)operation(temp));
+		}
+	}
+	}
+	
+	
+	int operation(char oper){
+		int a=(int)s.pop();
+		int b=(int)s.pop();
+		
+		switch(oper){
+			case('+'):{
+				return a+b;
+				
+			}
+		 
+			case('-'):{
+				return a-b;
+				
+			}
+			case('*'):{
+				return a*b;
+				
+			}
+			
+			case('/'):{
+				return a/b;
+			}
+			
+	
+		}
+		
+		return '\0';
+		
+		
+		
+	}
+	
+	
+	
+	
+}
+
+
+
+

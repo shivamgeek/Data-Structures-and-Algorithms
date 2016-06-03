@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.pack.run&apos; to &apos;findUnion&apos;&#x0A;- Original project: &apos;disjointSetDS&apos;&#x0A;- Original element: &apos;com.pack.run&apos;&#x0A;- Renamed element: &apos;com.pack.findUnion&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;run&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.pack{run.java[run" matchStrategy="1" name="findUnion" qualified="false" references="true" similarDeclarations="false" stamp="1458929116300" textual="false" version="1.0"/>
+</session>

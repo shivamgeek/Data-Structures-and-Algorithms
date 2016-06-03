@@ -1,0 +1,87 @@
+package com.pack;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLDecoder;
+
+public class downloader {
+	
+	public static void main(String args[]) throws Exception{
+		new downloader().download("https://www.youtube.com/watch?v=8hzaZvIK4vk","testFileDownload.mp4");
+	}
+
+	void download(String url,String fileName) throws Exception{
+		
+		String urlId=url.split("v=")[1].split("&")[0];
+		String fetchUrlId=generateId(urlId);
+		if(fetchUrlId==null){
+			throw new Exception("Incorrect URL");
+			
+		}
+		
+	String finalUrl="https://youtube.com/get_video_info?&video_id="+urlId+"&t="+fetchUrlId;
+	getStream(finalUrl,fileName);
+		
+	}
+	
+	String generateId(String vid) throws IOException{
+		String fetchUrl="https://youtube.com/get_video_info?&video_id="+vid;
+		URL u=new URL(fetchUrl);
+		HttpURLConnection conn=(HttpURLConnection)u.openConnection();
+		InputStream inp=conn.getInputStream();
+		BufferedReader br=new BufferedReader(new InputStreamReader(inp));
+		String line;
+		StringBuffer buffer=new StringBuffer();
+		while((line=br.readLine())!=null){
+			buffer.append(line);
+		}
+		String decode=URLDecoder.decode(buffer.toString(),"UTF-8");
+		String[] arr=decode.split("&");
+		for(int i=0;i<arr.length-1;i++){
+			if(arr[i]==null){
+				continue;
+			}
+					String param1=arr[i].substring(0,arr[i].indexOf("="));
+					String param2=arr[i].substring(param1.length()-1);
+			        if(param1.equals("token")){
+			        	return param2;
+			        }
+			
+		}
+		
+		return "";
+	}
+	
+	
+	void getStream(String link,String fileName) throws IOException{
+		
+		URL url=new URL(link);
+		HttpURLConnection conn=(HttpURLConnection)url.openConnection();
+		//String type=conn.getContentType();
+		InputStream is=conn.getInputStream();
+		FileOutputStream fs=new FileOutputStream(new File(fileName));
+		byte[] outputBytes=new byte[40960];
+		int bytesRead,read=0;
+		//int length=conn.getContentLength();
+		while((bytesRead=is.read(outputBytes,0,40960))!=-1){
+			read+=bytesRead;
+			fs.write(outputBytes,0,bytesRead);
+			System.out.println("downloading...");
+		}
+			fs.flush();
+			fs.close();
+		
+		
+	}
+	
+	
+	
+	
+}

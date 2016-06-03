@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.pack.heap&apos; to &apos;Heap&apos;&#x0A;- Original project: &apos;huffmanCoding&apos;&#x0A;- Original element: &apos;com.pack.heap&apos;&#x0A;- Renamed element: &apos;com.pack.Heap&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;heap&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.pack{heap.java[heap" matchStrategy="1" name="Heap" qualified="false" references="true" similarDeclarations="false" stamp="1459506069977" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;treeDataStructure&apos;&#x0A;- Original project: &apos;treeDataStructure&apos;&#x0A;- Original elements:&#x0A;     com.pack.mainRun.java&#x0A;     com.pack.node.java&#x0A;     com.pack.tree.java" description="Delete elements" element1="/src&lt;com.pack{node.java" element2="/src&lt;com.pack{mainRun.java" element3="/src&lt;com.pack{tree.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1457249170400" subPackages="false" version="1.0"/>
+</session>

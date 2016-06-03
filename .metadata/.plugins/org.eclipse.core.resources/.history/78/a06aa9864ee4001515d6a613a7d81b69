@@ -1,0 +1,28 @@
+package treeDataStructure;
+
+import java.util.LinkedList;
+
+public class test {
+	
+	test(){
+		System.out.println("parameterized constructer");
+	}
+	int as;
+	static LinkedList<test> list;
+	public static void main(String args[]){
+		list =new LinkedList<test>();
+		Runtime r=Runtime.getRuntime();
+		while(true){
+			System.out.println(r.freeMemory());
+			list.add(new test());	
+		}
+		
+	}
+	
+	int meth(){
+		return 9;
+	}
+	
+	
+
+}

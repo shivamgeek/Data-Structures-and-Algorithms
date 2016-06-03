@@ -1,0 +1,72 @@
+package com.pack;
+
+public class greedy {
+
+	public static void main(String args[]){
+		
+	}
+	
+}
+
+
+
+class graph{
+	
+	int E,V;
+	edge e[];
+	node n[];
+	
+	class edge{
+		int src,dest,weight;
+	}
+	class node{
+		int rank,parent;
+	}
+	
+	graph(int E,int V){
+		this.E=E;
+		this.V=V;
+		e=new edge[E];
+		n=new node[V];
+		for(int i=0;i<E;i++){
+			e[i]=new edge();
+		}
+		for(int i=0;i<V;i++){
+			n[i]=new node();
+			n[i].parent=i;
+			n[i].rank=0;
+		}
+		
+	}
+	
+	int find(int i){
+		if(n[i].parent!=i){
+			n[i].parent=find(n[i].parent);
+		}
+	return n[i].parent;
+	}
+	
+	
+	void union(int i,int j){
+		int root1=find(i);
+		int root2=find(j);
+		int rank1=n[root1].rank;
+		int rank2=n[root2].rank;
+		if(rank1>rank2){
+			n[root2].parent=root1;
+		}
+		else if(rank2>rank1){
+			n[root1].parent=root2;
+		}
+		else{
+			n[root2].parent=root1;
+			n[root1].rank++;
+		}
+		
+		
+	}
+	
+	
+	
+	
+}

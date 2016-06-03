@@ -1,0 +1,30 @@
+package com.stack;
+
+public class postfixEvaluation {
+
+	String exp;
+	stack s;
+	char temp;
+	
+	postfixEvaluation(){
+		s=new stack();
+	}
+	
+	void evaluate(){
+		for(int i=0;i<exp.length();i++){
+			temp=exp.charAt(i);
+		if(Character.isDigit(temp)){
+			s.push(temp);
+		}
+		else{
+			
+		}
+	}
+	}
+	
+	
+	void operation(char oper){
+		int a=s.
+	}
+	
+}

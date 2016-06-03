@@ -1,0 +1,67 @@
+package com.pack;
+
+public class run {
+	
+	public static void main(String args[]){
+		
+	}
+
+}
+
+
+class graph{
+	
+	int E,V,parent[];
+	edge e[];
+	
+	graph(int E,int V){
+		this.E=E;
+		this.V=V;
+		e=new edge[E];
+		for(int i=0;i<E;i++){
+			e[i]=new edge();
+		}
+		parent=new int[V];
+		for(int i=0;i<V;i++){
+			parent[i]=-1;
+		}
+		
+	}
+	
+	class edge{
+		int src,dest;
+	}
+	
+	
+	
+	int find(int node){
+		if(parent[node]==-1){
+			return node;
+		}
+		else{
+		return find(parent[node]);
+	}
+	}
+	
+	void union(int node1,int node2){
+	
+		int parentNode1=find(node1);
+		int parentNode2=find(node2);
+		parent[parentNode1]=parentNode2;
+			}
+		
+		
+	void findCycle(){
+		
+	}
+	
+	
+		
+		
+	}
+	
+	
+	
+	
+	
+	

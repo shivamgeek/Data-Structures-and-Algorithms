@@ -1,0 +1,78 @@
+package com.pack;
+
+public class list {
+	
+	public static void main(String args[]){
+		
+		/*int count=20,s=20;
+		
+		node temp,n,a;
+		
+		node n1=new node(1);
+		
+		n=n1;
+		temp=n1;
+		while(count>0){
+			a=new node(count);
+			temp.next=a;
+			temp=a;
+			count--;
+		}
+		
+		while(n.next!=null){
+			System.out.println(n.data);
+			n=n.next;
+		}*/
+		
+		
+		node first=new node(0);
+		node start=first,temp;
+		int i=1;
+		temp=start;
+		while(i<21){
+			node n=new node(i);
+			temp.next=n;
+			temp=n;
+			i++;
+			
+		}
+		
+		while(start.next!=null){
+			System.out.println(start.data);
+			start=start.next;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+
+}
+
+class node{
+	int data;
+	node next=null;
+	
+	node(int data){
+		this.data=data;
+	}
+	
+	node(){
+		
+	}
+	
+}

@@ -1,0 +1,43 @@
+package com.stack;
+
+public class stack {
+
+	int top=-1,max=10;
+	int arr[]=new int[max];
+	
+	void push(int data){
+		top++;
+		if(top>=max){
+		top--;
+		System.out.println("stack overflow !!!");
+		}
+		else{
+			arr[top]=data;
+		}
+	}
+	
+	void pop(){
+		top--;
+		if(top<0){
+			top++;
+			System.out.println("stack underflow !!!");
+		}else{
+			System.out.println("element popped");
+		}
+		
+		
+	}
+	
+	void display(){
+	 for(int i=0;i<=top;i++){
+		 System.out.println(arr[i]);
+	 }
+		
+	}
+	
+	
+	
+	
+	
+	
+}

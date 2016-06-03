@@ -1,0 +1,36 @@
+package com.pack;
+
+public class list {
+	
+	public static void main(String args[]){
+		
+		int count=20;
+		node temp;
+		System.out.println(new node().next);
+		while(count<0){
+			temp=new node(count);
+			
+			
+		}
+		
+		
+		
+	}
+	
+	
+
+}
+
+class node{
+	int data;
+	node next;
+	
+	node(int data){
+		this.data=data;
+	}
+	
+	node(){
+		
+	}
+	
+}

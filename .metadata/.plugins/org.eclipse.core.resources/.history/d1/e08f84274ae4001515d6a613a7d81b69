@@ -1,0 +1,24 @@
+package treeDataStructure;
+
+public class test {
+	
+	test(){
+		System.out.println("parameterized constructer");
+	}
+	int a;
+	
+	public static void main(String args[]){
+		while(true){
+			test a=new test();
+			System.out.println("ob made");
+		}
+		
+	}
+	
+	int meth(){
+		return 9;
+	}
+	
+	
+
+}

@@ -1,0 +1,34 @@
+package treeDataStructure;
+
+import java.util.LinkedList;
+
+public class test {
+	
+	test(){
+		//System.out.println("parameterized constructer");
+	}
+	static int as=0,a=10;
+	
+	
+	public static void main(String args[]){
+		Runtime r=Runtime.getRuntime();
+	
+		for(int i=0;i<1000000;i++){
+			test t=new test();
+			t=null;
+			as++;
+		}
+		
+	}
+	
+	public void finalize(){
+		System.out.println("this is the finalize method  "+as );
+	}
+	
+	int meth(){
+		return 9;
+	}
+	
+	
+
+}
